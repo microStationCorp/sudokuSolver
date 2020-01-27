@@ -58,7 +58,7 @@ def main(brd):
     while z < len(zeros) and z>=0:
         num = brd[zeros[z]] + 1
         while num < 10:
-            if not check_row_column(brd[zeros[z][0]], num) and not check_row_column(brd[:, zeros[z][1]],num) and not check_sub_group(zeros[z],board,num):
+            if not check_row_column(brd[zeros[z][0]], num) and not check_row_column(brd[:, zeros[z][1]],num) and not check_sub_group(zeros[z],brd,num):
                 brd[zeros[z]] = num
                 break
             else:
